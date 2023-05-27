@@ -1,0 +1,148 @@
+Mean score: 0.7654456989275664
+Standard deviation: 0.004823264475709899
+Accuracy: 0.7423625254582484
+Precision: 0.1527777777777778
+Recall: 0.8301886792452831
+F1-score: 0.2580645161290323
+ROC AUC score: 0.8507017080650731
+PR AUC score: 0.2487360753406038
+
+--First Kaggle submission: 0.808-- (results.csv)
+
+(oversampler, one-hot encoding, logistic regression)
+
+Notes:
+
+** At first, no result data could be obtained due to data imbalance, so the sample size was expanded using oversampler.
+Error rates began to emerge.
+
+** Using one-hot encoding, categorical values transformed.
+
+** The logistic regression model learns the relationship between the predictor variables and the target variable
+by estimating the probability of the target variable taking a particular value,
+given the values of the predictor variables. The model then predicts the class with the highest probability
+(i.e., the class with the higher predicted probability).Since we are dealing with a binary classification problem of predicting stroke (0 or 1),
+logistic regression is a suitable algorithm to use.
+
+
+** There were approximately 200 missing BMI values, and no significant correlation could be found between BMI and other features.
+Therefore, instead of imputing the missing BMIs from other features, the mean of the remaining 4900 BMIs was used for imputation.
+This approach yielded good results, but higher accuracy was achieved by dropping all rows with missing BMI values.
+** Didn't touch outliers.
+** No feature selection, engineering.
+
+-------
+
+Added grouping ages and categorize bmi values (some feature engineering):
+ 
+Mean score: 0.7784401460380072
+Standard deviation: 0.003674668563160736
+Accuracy: 0.7423625254582484
+Precision: 0.15034965034965034
+Recall: 0.8113207547169812
+F1-score: 0.25368731563421826
+ROC AUC score: 0.8360176290188274
+PR AUC score: 0.21609255796723262
+
+**Almost nothing changed.
+
+------
+
+Added feature selection( used 10 most imporant features ):
+Mean score: 0.7690263371143606
+Standard deviation: 0.006570978328574536
+Accuracy: 0.7291242362525459
+Precision: 0.15081967213114755
+Recall: 0.8679245283018868
+F1-score: 0.2569832402234637
+ROC AUC score: 0.8454008164591669
+PR AUC score: 0.21415315096864215
+
+**Recall and ROC is increased. Accuracy decreased.
+
+------
+
+Updated predicted probability threshold from 0.5 to 0.7 (most optimal):
+
+(we are essentially setting a cutoff point above which we consider a positive prediction, 
+and below which we consider a negative prediction. In the case of binary classification,where we have two classes
+(e.g. "positive" and "negative"), the predicted probability represents the estimated likelihood tha a given sample belongs to the positive class. 
+By default, if this probability is greater than or equal to 0.5, we consider the prediction to be positive. However, by adjusting the threshold,
+we can tune the tradeoff between precision and recall, and find the threshold that best fits our needs.
+
+Accuracy: 0.8391038696537678
+Precision: 0.1893491124260355
+Recall: 0.6037735849056604
+F1-score: 0.2882882882882883
+
+**Accuracy increased strictly, recall decreased strictly.
+
+------
+
+Tried XGBoost(Extreme Gradient) with optimal parameters(according to GridSearch):
+(colsample_bytree=1.0, learning_rate=0.3, max_depth=6, n_estimators=100, reg_alpha=0.1, reg_lambda=0, subsample=1.0)
+
+and the output is:
+
+Accuracy: 0.8645621181262729
+Precision: 0.12264150943396226
+Recall: 0.24528301886792453
+F1-score: 0.16352201257861634
+ROC AUC score: 0.7580884294331499
+PR AUC score: 0.11783513576498832
+
+**Accuracy increased strictly, recall decreased strictly.
+
+--Second Kaggle Submission: 0.68-- (results_xg.csv)
+
+(tried removing all outliers it dropped around to 0.58)
+
+------
+
+oversample, undersample, SMOTE, SMOTENN,
+na bmi's dropped
+na smoking_status replaced never_smoked
+Other gender replaced Male
+Extra features, 13 important features, trained joined real_world_data and synthetic_data, l2 regularization (c=0.1)
+
+performance:
+Accuracy: 0.7417759089784813
+Precision: 0.11724137931034483
+Recall: 0.8717948717948718
+F1-score: 0.2066869300911854
+ROC AUC score: 0.8789291062252215
+PR AUC score: 0.2032688517699424
+
+--Kaggle Submission (unseen test data): 0.813--
+
+-------
+
+undersample, SMOTE, SMOTENN,
+na bmi's dropped
+na smoking_status replaced never_smoked
+Other gender replaced Male
+Extra features, 13 important features, trained joined real_world_data and synthetic_data, l2 regularization (c=0.1)
+Also we set our positively predict probability to 0.7
+
+When average=None is used, the precision_score function calculates the precision separately for each class. 
+This means that if you have imbalanced classes where one class has a significantly larger number of samples compared to the other,
+the precision for the smaller class can be quite low. This is because precision is sensitive to the number of false positives,
+and with imbalanced classes, the number of false positives in the smaller class can be relatively higher, leading to a lower precision score for that class.
+On the other hand, when average='weighted' is used, the precision scores for each class are calculated separately,
+and then a weighted average is taken based on the number of true instances for each class. 
+This means that the precision for each class contributes differently to the overall precision score,
+depending on the number of true instances in that class. If you have imbalanced classes, where one class has a larger number of true instances,
+the precision for that class will have a higher impact on the overall precision score. 
+As a result, the precision score can be higher when using average='weighted' compared to average=None in the case of imbalanced classes.
+
+performance:
+Accuracy: 0.8229037843185754
+Precision: 0.9562065231251275
+Recall: 0.7628205128205128
+F1-score: 0.874521942972522
+ROC AUC score: 0.87691054336282
+PR AUC score: 0.18751436180421371
+
+------------------------
+
+ 
