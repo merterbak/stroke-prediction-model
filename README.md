@@ -42,16 +42,17 @@ The code is organized into the following sections:
 7. **CatBoost Classifier**: The code trains and evaluates a CatBoost Classifier on the validation set.
 
 
-## Results:
+
+## Results
 | Metric              | Score     |
 |---------------------|-----------|
-| Accuracy            | 0.7418    |
-| Precision           | 0.1172    |
-| Recall              | 0.8718    |
-| F1-score            | 0.2067    |
-| ROC AUC score       | 0.8789    |
-| PR AUC score        | 0.2033    |
-| Kaggle Submission   | 0.813     |
+| Accuracy            | 0.8222    |
+| Precision           | 0.9562    |
+| Recall              | 0.7628    |
+| F1-score            | 0.8745    |
+| ROC AUC score       | 0.8769    |
+| PR AUC score        | 0.1875    |
+| Kaggle Submission   | 0.814     |
 
 
 
