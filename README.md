@@ -6,9 +6,10 @@ https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
 ## Table of Contents
 
-- [Context](#Context)
-- [Code_Structure](#Code_Structure)
 - [Dataset](#Dataset)
+- [Context](#Context)
+- [Dependencies](#Dependencies)
+- [Code_Structure](#Code_Structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
