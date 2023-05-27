@@ -11,6 +11,7 @@ https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 - [Features](#features)
 - [Contributing](#contributing)
 - [Authors](#authors)
+- [Results](#Results)
 
 ### Context
 According to the World Health Organization stroke is the second leading cause of death in the world, responsible for approximately 11% of deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status.
