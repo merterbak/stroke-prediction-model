@@ -3,21 +3,6 @@ This repository contains code for a stroke prediction model based on the "Stroke
 ### Dataset
 https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
-### Dependencies
-The following dependencies are required to run the code in this repository:
-
-
-- Python
-- Pandas
-- Seaborn
-- Scipy
-- Numpy
-- Matplotlib
-- Scikit-learn
-- Imbalanced-learn
-- Xgboost
-- Lightgbm
-- Catboost
 
 ## Table of Contents
 
@@ -33,6 +18,22 @@ The following dependencies are required to run the code in this repository:
 
 ### Context
 According to the World Health Organization stroke is the second leading cause of death in the world, responsible for approximately 11% of deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status.
+
+### Dependencies
+The following dependencies are required to run the code in this repository:
+
+- Python
+- Pandas
+- Seaborn
+- Scipy
+- Numpy
+- Matplotlib
+- Scikit-learn
+- Imbalanced-learn
+- Xgboost
+- Lightgbm
+- Catboost
+
 ## Code_Structure
 The code is organized into the following sections:
 1. **Data Preprocessing**: In this step, the code reads and combines the training and testing data, handles missing values, encodes categorical variables, and adds additional features.
