@@ -4,14 +4,14 @@ This repository contains code for a stroke prediction model based on the "Stroke
 https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 ## Table of Contents
 
-- [Introduction](#Introduction)
+- [Context](#Context)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Authors](#authors)
 
-### introduction
+### Context
 According to the World Health Organization stroke is the second leading cause of death in the world, responsible for approximately 11% of deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status.
 
 
