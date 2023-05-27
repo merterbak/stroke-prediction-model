@@ -6,12 +6,17 @@ https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 ##Dependencies
 The following dependencies are required to run the code in this repository:
 
-- Python 3.6+
-- NumPy
-- Pandas
-- Scikit-learn
-- XGBoost
-- LightGBM
+- pandas
+- seaborn
+- scipy
+- numpy
+- matplotlib
+- scikit-learn
+- imbalanced-learn
+- xgboost
+- lightgbm
+- catboost
+
 ## Table of Contents
 
 - [Context](#Context)
