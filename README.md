@@ -3,7 +3,7 @@ This repository contains code for a stroke prediction model based on the "Stroke
 ### Dataset
 https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
-##Dependencies
+###Dependencies
 The following dependencies are required to run the code in this repository:
 
 
