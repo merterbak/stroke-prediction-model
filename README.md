@@ -10,11 +10,11 @@ Our code uses machine learning algorithms to analyze patient data and predict th
 - [Contributing](#contributing)
 - [Authors](#authors)
 
-# Introduction
+## Introduction
 
 
 
-# Authors
+## Authors
 - Fatih Emir Güler
 - Mert Erbak 
 - Mohammed Ammar Salahie
