@@ -107,13 +107,13 @@ feature_names = importances_df['feature']
 importance_scores = importances_df['importance']
 
 
-plt.figure(figsize=(10, 6))  # Adjust the figure size as per your preference
+plt.figure(figsize=(10, 6)) 
 plt.bar(range(len(feature_names)), importance_scores)
 plt.xlabel('Feature')
 plt.ylabel('Importance Score')
 plt.title('Feature Importance')
-plt.xticks(range(len(feature_names)), feature_names, rotation='vertical', fontsize=8)  # Adjust the rotation angle and font size
-plt.tight_layout()  # Ensure the labels are properly spaced
+plt.xticks(range(len(feature_names)), feature_names, rotation='vertical', fontsize=8)  
+plt.tight_layout()  
 plt.show()
 
 X_train_selected = X_train[:, importances_df.head(k).index]
@@ -272,7 +272,7 @@ pr_auc = average_precision_score(y_val, y_pred_proba_lgb)
 print("PR AUC score:", pr_auc)
 voting_model = VotingClassifier(
     estimators=[('logreg', model), ('xgb', xgb_clf), ('lgbm', lgb_clf_best)],
-    voting='soft'  # Use soft voting for probabilistic outputs
+    voting='soft' 
 )
 
 voting_model.fit(X_train_selected, y_train)
