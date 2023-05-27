@@ -25,6 +25,16 @@ The following dependencies are required to run the code in this repository:
 
 ### Context
 According to the World Health Organization stroke is the second leading cause of death in the world, responsible for approximately 11% of deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status.
+## Code Structure
+The code is organized into the following sections:
+1. **Data Preprocessing**: In this step, the code reads and combines the training and testing data, handles missing values, encodes categorical variables, and adds additional features.
+2. **Feature Selection**: The importance of features is determined using a Random Forest Classifier. The code selects the top-k features for further analysis.
+3. **Model Training**: Two models, Logistic Regression and XGBoost, are trained on the selected features. The models are evaluated on the validation set using various performance metrics, including accuracy, precision, recall, F1-score, ROC AUC score, and PR AUC score.
+4. **Model Evaluation**: The trained models are evaluated on the validation set, and the code displays their performance metrics.
+5. **Model Testing**: The final trained models, Logistic Regression and XGBoost, are used to make predictions on the test data. The code stores the predictions in a CSV file named "results_ronaldinho.csv".
+6. **Ensemble Model**: An ensemble model is implemented using a voting classifier. It combines the trained Logistic Regression, XGBoost, and LightGBM models. The code evaluates and displays the performance of the ensemble model.
+7. **CatBoost Classifier**: The code trains and evaluates a CatBoost Classifier on the validation set.
+
 
 ## Results
 | Metric              | Score     |
