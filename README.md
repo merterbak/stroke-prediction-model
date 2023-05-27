@@ -22,6 +22,7 @@ The following dependencies are required to run the code in this repository:
 ## Table of Contents
 
 - [Context](#Context)
+- [Code Structure](#Code Structure)
 - [Dataset](#Dataset)
 - [Installation](#installation)
 - [Usage](#usage)
