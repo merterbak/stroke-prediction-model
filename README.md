@@ -42,7 +42,7 @@ The code is organized into the following sections:
 7. **CatBoost Classifier**: The code trains and evaluates a CatBoost Classifier on the validation set.
 
 
-## Results
+## Results:
 | Metric              | Score     |
 |---------------------|-----------|
 | Accuracy            | 0.7418    |
