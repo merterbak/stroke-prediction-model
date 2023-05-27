@@ -33,7 +33,7 @@ The following dependencies are required to run the code in this repository:
 
 ### Context
 According to the World Health Organization stroke is the second leading cause of death in the world, responsible for approximately 11% of deaths. This dataset is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status.
-## Code Structure
+## Code_Structure
 The code is organized into the following sections:
 1. **Data Preprocessing**: In this step, the code reads and combines the training and testing data, handles missing values, encodes categorical variables, and adds additional features.
 2. **Feature Selection**: The importance of features is determined using a Random Forest Classifier. The code selects the top-k features for further analysis.
