@@ -54,8 +54,8 @@ The code is organized into the following sections:
 | PR AUC score        | 0.1875    |
 | Kaggle Submission   | 0.814     |
 
-
-
+## Outro 
+This project is the term project for Bahcesehir University AIN2002 Spring. As a group project, each member made valuable contributions. I took the responsibility of providing the road map of the model and explaining the model's story through text and visualizations using Excalidraw PNG. Also entire project code contributions provided by me, implemented various machine learning algorithms and performing data preprocessing tasks. Mert and Ammar took charge of creating the README file and LaTeX file. We collaborated together on the project report, combining our efforts to deliver a comprehensive and well-documented outcome.
 
 
 ## Authors
