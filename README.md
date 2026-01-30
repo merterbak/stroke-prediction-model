@@ -57,5 +57,5 @@ The code is organized into the following sections:
 ## Authors
 - Fatih Emir Güler
 - Mert Erbak 
-- Mohammed Ammar Salahie
+- Ammar Salahie
 
